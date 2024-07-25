@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #decdac;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn-container {
+  /* display: none; */
+  position: relative;
+  width: 485px;
+  height: 243px;
+  background-color: #fefaf3;
+  border-radius: 29px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-container button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebbf53;
+  width: 285px;
+  height: 63px;
+  border: none;
+  border-radius: 32px;
+  font-size: 24px;
+  color: #fefaf3;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-container button:active {
+  width: 282px;
+  height: 60px;
+}
+.popup-open {
+  display: none;
+  position: relative;
+  width: 690px;
+  height: 346px;
+  border-radius: 41px;
+  background-color: #fefaf3;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.popup-open .close-icon {
+  position: absolute;
+  top: 22px;
+  right: 37px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.popup-content {
+  display: flex;
+}
+.popup-content .logo svg {
+  width: 213px;
+  height: 218px;
+  margin-top: -34px;
+  margin-left: 59px;
+}
+.popup-content .sun-icon {
+  position: absolute;
+  top: 13.74px;
+  left: 204.39px;
+  width: 5px;
+  animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate {
+  /* 25%{
+    width: 35px;
+    transform: translateX(5px);
+  }
+  50%{
+    width: 37px;
+    transform: translateX(6px);
+  }
+  75%{
+    width: 31px;
+    transform: translateX(8px);
+  }
+  100%{
+    width: 29px;
+    transform: translateX(-5px) rotate(360deg);
+  } */
+  100% {
+    width: 33px;
+  }
+}
+.popup-content h1 {
+  font-size: 40px;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+.popup-content p {
+  font-size: 18px;
+  margin-left: 60px;
+}
+.popup-open input {
+  width: 381px;
+  height: 56px;
+  border: 1px solid #afa187;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: none;
+  outline: none;
+  background-color: #eee8dd;
+  color: #afa187;
+  position: absolute;
+  left: 66px;
+  bottom: 56px;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 0 15px 0 28px;
+}
+.popup-open input::placeholder {
+  color: #afa187;
+
+}
+.popup-open button {
+  position: absolute;
+  right: 65px;
+  bottom: 56px;
+  background-color: #ebbf53;
+  width: 179px;
+  height: 56px;
+  border: 1px solid #ebbf53;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: #fefaf3;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.popup-open button:active {
+  background-color: #e2793a;
+  border: 1px solid #e2793a;
+}
+.made-with {
+  position: absolute;
+  bottom: 10px;
+  left: 32%;
+  text-align: center;
+  font-size: 12px;
+  color: #858585;
+  font-weight: 500;
+}
+.made-with .heart {
+  color: rgb(224, 0, 0);
+  text-shadow: 0 0 3px red;
+}
+.made-with .my-name {
+  color: #827f3b;
+  font-weight: 700;
+}
+
+/***************************** Media Query *******************************/
+@media (max-width: 393px) {
+  .btn-container {
+    width: 350px;
+    height: 190px;
+  }
+  .btn-container button {
+    width: 240px;
+    font-size: 20px;
+  }
+  .popup-open {
+    width: 370px;
+    height: 410px;
+  }
+  .popup-content {
+    flex-direction: column;
+  }
+  .popup-content .logo svg {
+    width: 160px;
+    height: 160px;
+    margin-top: -34px;
+    margin-left: 25px;
+  }
+  .popup-content h1 {
+    font-size: 36px;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+  .popup-content p {
+    font-size: 18px;
+    margin-left: 25px;
+  }
+  .popup-open input {
+    width: 226px;
+    height: 50px;
+    left: 25px;
+    font-size: 16px;
+    padding: 0 15px 0 20px;
+  }
+  .popup-open button {
+    height: 50px;
+    width: 95px;
+    right: 25px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  .made-with {
+    left: 17%;
+    font-size: 11px;
+  }
+  .popup-open .close-icon {
+    right: 26px;
+  }
+  .popup-content .sun-icon {
+    top: 4.74px;
+    left: 134.39px;
+  }
+  @keyframes animate {
+    100% {
+      width: 26px;
+    }
+  }
+}
